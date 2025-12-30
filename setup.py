@@ -5,13 +5,20 @@ LONG_DESCRIPTION = 'Defines colour palettes and themes for RSS publications.'
 
 # Setting up
 setup(
-        name="RSSpythemes", 
+        name="RSSpythemes",
         version="1.0.0",
         author="Nicola Rennie",
         author_email="nrennie35@gmail.com>",
         description=DESCRIPTION,
         long_description=LONG_DESCRIPTION,
         packages=find_packages(),
+        package_data={
+            'RSSpythemes': [
+                'fonts/source_sans_pro/*.ttf',
+                'fonts/source_sans_pro/*.txt',
+            ]
+        },
+        include_package_data=True,
         install_requires=["colour>=0.1.5", "matplotlib>=3.5.1"],
         keywords=['python'],
         classifiers= [

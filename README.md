@@ -18,6 +18,39 @@ Then load the package (and `matplotlib`):
 import RSSpythemes as rss
 import matplotlib.pyplot as plt
 ```
+
+## Using Source Sans Pro Fonts
+
+This package bundles Source Sans Pro fonts for use in your matplotlib visualizations. To use the fonts, you need to register them with matplotlib first:
+
+```python
+import RSSpythemes as rss
+import matplotlib.pyplot as plt
+
+# Register the Source Sans Pro fonts with matplotlib
+rss.register_source_sans_fonts()
+
+# Set Source Sans Pro as the default font
+plt.rcParams['font.family'] = 'Source Sans Pro'
+```
+
+You can verify that the fonts are available:
+
+```python
+if rss.is_source_sans_available():
+    print("Source Sans Pro is ready to use!")
+```
+
+The bundled Source Sans Pro fonts include:
+- Regular
+- Italic
+- Bold
+- Bold Italic
+
+### Font License
+
+The Source Sans Pro fonts are licensed under the SIL Open Font License, Version 1.1. Copyright 2010, 2012, 2014 Adobe Systems Incorporated, with Reserved Font Name 'Source'. See the full license at `RSSpythemes/fonts/source_sans_pro/OFL.txt`.
+
 ## Examples
 
 Using a single colour from stored variables:
